@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Dowry Calculator</title>
+</head>
+<body>
+    <div class="container mt-4 shadow p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col col-sm-12">
+                <h1 class="text-center">Dowry Calculator</h1>
+                <form id="dowryForm">
+                    <label for="name">Bride/Groom's Name:</label>
+                    <input type="text" id="name" required><br><br>
+
+                    <label for="starting_bid">Starting Bid ($):</label>
+                    <input type="number" id="starting_bid" required><br><br>
+
+                    <label for="education">Education level:</label><br>
+                    <select id="education">
+                        <option value="1.5">Undergraduate degree</option>
+                        <option value="1.2">College degree</option>
+                        <option value="1.05">High school degree</option>
+                        <option value="0.9">Middle school degree</option>
+                    </select>
+                    <hr>
+
+                    <label for="networth">Family net worth:</label><br>
+                    <select id="networth">
+                        <option value="2">More than 10,000$</option>
+                        <option value="1.5">Between 5,000$ and 10,000$</option>
+                        <option value="1.2">Less than 5,000$</option>
+                    </select>
+                    <hr>
+
+                    <label for="caste">Caste:</label><br>
+                    <select id="caste">
+                        <option value="100">Brahmin (+100$)</option>
+                        <option value="50">Kshatriya (+50$)</option>
+                        <option value="20">Vaishya (+20$)</option>
+                        <option value="10">Shudra (+10$)</option>
+                        <option value="-50">Varna - Untouchable (-50$)</option>
+                    </select>
+                    <hr>
+
+                    <label for="skills">Skills (check all that apply):</label><br>
+                    <input type="checkbox" class="skills" value="10"> Plays a musical instrument (+10$)<br>
+                    <input type="checkbox" class="skills" value="20"> Good cook (+20$)<br>
+                    <input type="checkbox" class="skills" value="15"> Easygoing character (+15$)<br>
+                    <input type="checkbox" class="skills" value="10"> Sings well (+10$)<br>
+                    <hr>
+
+                    <label for="age">Age:</label><br>
+                    <input type="radio" name="age" value="1.5"> 18-23 (coefficient 1.5)<br>
+                    <input type="radio" name="age" value="1.2"> 24-27 (coefficient 1.2)<br>
+                    <input type="radio" name="age" value="0.95"> 28+ (coefficient 0.95)<br>
+                    <hr>
+
+                    <label for="reputation">Reputation (check all that apply):</label><br>
+                    <input type="checkbox" class="reputation" value="0.85"> Gossips about parents (coefficient 0.85)<br>
+                    <input type="checkbox" class="reputation" value="0.9"> Gossips about character (coefficient 0.9)<br>
+                    <input type="checkbox" class="reputation" value="-20"> General gossip around person (-20$)<br>
+                    <hr>
+
+                    <label for="love_letter">Love Letter:</label><br>
+                    <textarea id="love_letter" maxlength="500"></textarea><br><br>
+
+                    <button id="submit" type="button" class="btn btn-primary">Calculate price</button>
+
+                    <h2 id="result" class="mt-4"></h2>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
